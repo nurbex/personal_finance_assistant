@@ -123,13 +123,24 @@ public class Gui_Controller {
     }
 
     public void add_income_Pushed(ActionEvent actionEvent) {
-        Income income = new Income(income_Type.getText(), Float.parseFloat(income_Amount.getText()), LocalDateTime.now());
-        if (incomeService.insert(income))
-            addIncomeStatus.setText("Your income recorded!");
-        else
-            addIncomeStatus.setText("Sorry Incomes are full!");
+        if(((income_Type.getText()).equals("Enter type") )||(income_Type.getText().isEmpty())){
+            addIncomeStatus.setText("Please enter income type.");
+        }
+        else{
 
-        drawIncomeTableView();
+            try {
+                Income income = new Income(income_Type.getText(), Float.parseFloat(income_Amount.getText()), LocalDateTime.now());
+                if (incomeService.insert(income))
+                    addIncomeStatus.setText("Your income recorded!");
+                else
+                    addIncomeStatus.setText("Sorry Incomes are full!");
+
+                drawIncomeTableView();
+            }
+            catch(NumberFormatException e){
+                addIncomeStatus.setText("Please enter income amount.");
+            }
+        }
     }
 
 
@@ -175,15 +186,23 @@ public class Gui_Controller {
     }
 
     public void add_expense_Pushed(ActionEvent actionEvent) {
-        Expense expense = new Expense(expense_Type.getText(), Float.parseFloat(expense_Amount.getText()), LocalDateTime.now());
-        if (expenseService.insert(expense))
-            addExpenseStatus.setText("Your expense recorded!");
-        else
-            addExpenseStatus.setText("Sorry Expenses are full!");
 
-        drawExpenseTableView();
+        if(((expense_Type.getText()).equals("Enter type") )||((expense_Type.getText()).isEmpty())){
+            addExpenseStatus.setText("Please enter expense type.");
+        }
+        else {
+
+            try {
+                Expense expense = new Expense(expense_Type.getText(), Float.parseFloat(expense_Amount.getText()), LocalDateTime.now());
+                if (expenseService.insert(expense))
+                    addExpenseStatus.setText("Your expense recorded!");
+                else
+                    addExpenseStatus.setText("Sorry Expenses are full!");
+
+                drawExpenseTableView();
+            } catch (NumberFormatException e) {
+                addExpenseStatus.setText("Please enter expense amount.");
+            }
+        }
     }
-
-
-
 }
