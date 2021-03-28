@@ -78,7 +78,7 @@ public class Gui_Controller {
         drawChart=false;
         }
     }
-    
+
     //income tab selected
     private void drawIncomeTableView(){
         ObservableList<Income> tableData = FXCollections.observableArrayList();

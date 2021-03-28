@@ -50,7 +50,6 @@ public class FileRepo {
         // Step 1 : Tokenize, split
         // Step 2 : Go through each token and create Income object
         // Step 3 : return Income
-
         // ["I", "salary", "2000", "2021-03-15:14:56:00"] -->
 
         String[] tokens = line.split(";");
@@ -68,7 +67,6 @@ public class FileRepo {
         // Step 1 : Tokenize, split
         // Step 2 : Go through each token and create Income object
         // Step 3 : return Income
-
         // ["I", "salary", "2000", "2021-03-15:14:56:00"] -->
 
         String[] tokens = line.split(";");
