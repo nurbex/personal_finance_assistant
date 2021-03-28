@@ -13,7 +13,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import services.ExpenseService;
 import services.IncomeService;
-
 import java.time.LocalDateTime;
 
 
@@ -79,19 +78,16 @@ public class Gui_Controller {
         drawChart=false;
         }
     }
+    
     //income tab selected
     private void drawIncomeTableView(){
-
-
         ObservableList<Income> tableData = FXCollections.observableArrayList();
         for (Income i : incomeService.getData()) {
             tableData.add(i);
             //System.out.println(i);
         }
         incomeListTableView.setItems(tableData);
-        
     }
-
 
     public void listOfIncome_onSelect(Event event) {
 
@@ -127,7 +123,6 @@ public class Gui_Controller {
             addIncomeStatus.setText("Please enter income type.");
         }
         else{
-
             try {
                 Income income = new Income(income_Type.getText(), Float.parseFloat(income_Amount.getText()), LocalDateTime.now());
                 if (incomeService.insert(income))
@@ -143,12 +138,8 @@ public class Gui_Controller {
         }
     }
 
-
-
     //expense tab selected
     private void drawExpenseTableView(){
-
-
         ObservableList<Expense> expenseTableData = FXCollections.observableArrayList();
         for (Expense i : expenseService.getData()) {
             expenseTableData.add(i);
@@ -191,7 +182,6 @@ public class Gui_Controller {
             addExpenseStatus.setText("Please enter expense type.");
         }
         else {
-
             try {
                 Expense expense = new Expense(expense_Type.getText(), Float.parseFloat(expense_Amount.getText()), LocalDateTime.now());
                 if (expenseService.insert(expense))
