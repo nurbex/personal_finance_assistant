@@ -29,4 +29,7 @@ public class UserService {
                 ))).findFirst();
     }
 
+    public List<User> getUserList() {
+        return userList;
+    }
 }
