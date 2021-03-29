@@ -14,8 +14,8 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("ui/personal_finance_assistant_GUI.fxml"));
-            root.getStylesheets().add(getClass().getResource("ui/piechart.css").toExternalForm());
+            Parent root = FXMLLoader.load(getClass().getResource("/ui/personal_finance_assistant_GUI.fxml"));
+            //root.getStylesheets().add(getClass().getResource("ui/piechart.css").toExternalForm());
             stage.setScene(new Scene(root));
             stage.setTitle("Personal Finance Assistant");
             stage.show();
