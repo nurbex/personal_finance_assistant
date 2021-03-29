@@ -69,6 +69,8 @@ public class Gui_Controller {
             private Label youLoggedAsLabel=new Label();
     @FXML
             private Label currentUserLabel=new Label();
+    @FXML
+            private TabPane tabPane=new TabPane();
 
     //authentication
     public void userNameMouseClicked(){
@@ -96,6 +98,7 @@ public class Gui_Controller {
                 passWord.setVisible(false);
                 loginButton.setVisible(false);
                 enterUserInfoLabel.setVisible(false);
+                tabPane.setDisable(false);
             }
             else{
                 enterUserInfoLabel.setText("User name or password is wrong, please enter correct user name or password.");

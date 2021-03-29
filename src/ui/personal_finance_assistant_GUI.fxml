@@ -45,7 +45,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxWidth="1.7976931348623157E308" prefHeight="713.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Gui_Controller">
+<VBox maxWidth="1.7976931348623157E308" prefHeight="713.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Gui_Controller">
   <children>
       <AnchorPane minWidth="950.0" prefHeight="108.0" prefWidth="950.0">
          <children>
@@ -61,7 +61,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <TabPane fx:id="tabPane" prefHeight="544.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabPane" disable="true" prefHeight="544.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
             <Tab fx:id="balance" onSelectionChanged="#balance_onSelect" text="Balance">
                <content>
