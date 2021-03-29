@@ -35,6 +35,7 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -42,10 +43,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="585.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Gui_Controller">
+<VBox maxWidth="1.7976931348623157E308" prefHeight="713.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Gui_Controller">
   <children>
-      <TabPane prefHeight="544.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+      <AnchorPane minWidth="950.0" prefHeight="108.0" prefWidth="950.0">
+         <children>
+            <Label fx:id="enterUserInfoLabel" layoutX="14.0" layoutY="14.0" text="Enter user name and password:" />
+            <TextField fx:id="userName" layoutX="14.0" layoutY="41.0" onMouseClicked="#userNameMouseClicked" text="User name" />
+            <PasswordField fx:id="passWord" layoutX="177.0" layoutY="41.0" onMouseClicked="#passWordMouseClicked" text="password" />
+            <Button fx:id="loginButton" layoutX="362.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#loginButtonMouseClicked" text="Login" />
+            <Label fx:id="youLoggedAsLabel" layoutX="844.0" layoutY="14.0" text="You logged in as:" textAlignment="RIGHT" visible="false" AnchorPane.rightAnchor="15.0" />
+            <Label fx:id="currentUserLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="870.0" layoutY="38.0" text="placeholder" textAlignment="RIGHT" visible="false" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="tabPane" prefHeight="544.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
             <Tab fx:id="balance" onSelectionChanged="#balance_onSelect" text="Balance">
                <content>
@@ -105,9 +121,9 @@
             </Tab>
         </tabs>
       </TabPane>
-      <AnchorPane prefHeight="40.0" prefWidth="640.0">
+      <Separator minWidth="950.0" prefHeight="6.0" />
+      <AnchorPane prefHeight="56.0">
          <children>
-            <Separator prefHeight="6.0" prefWidth="950.0" />
             <Label contentDisplay="BOTTOM" layoutX="14.0" layoutY="11.0" text="All rights reserved. : )" />
          </children>
       </AnchorPane>
