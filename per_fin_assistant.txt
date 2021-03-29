@@ -2,3 +2,8 @@ I;e39e1b7b-cce9-4441-86f6-cfa51b3ca559;salary;5000.0;2021-03-28T19:14:54.1539703
 E;7b232dfc-f61e-4276-97f1-7631e10cbea0;house_rent;300.0;2021-03-28T19:15:25.347625100;user1@binarycod.com
 I;a8b68a45-7432-4040-b510-981c97e5d165;freelancing;3432.0;2021-03-28T19:23:31.509649900;user1@binarycod.com
 E;bf83b9fc-3bc5-4290-b0ff-9a266e2d9c66;netflix_fee;30.0;2021-03-28T19:29:22.526499600;user1@binarycod.com
+I;2fa1c6d1-ca1f-4c1f-a221-4149ed0a10b3;slalaruy;3000.0;2021-03-28T20:52:36.726439600;user1@binarycod.com
+I;e14cf0e6-4ce6-460e-bdcf-ab243e1b6241;salalry;1000.0;2021-03-28T20:53:24.621190500;user1@binarycod.com
+E;4afad981-1c9b-4ec7-8b1f-e5d9ccd5f2b6;taxes;10000.0;2021-03-28T20:53:50.763707500;user1@binarycod.com
+I;9fc4cabc-cfd9-4759-a28e-4fb71317d10c;salary;30000.0;2021-03-28T21:05:31.209339800;user2@binarycod.com
+E;d3a25394-bcdc-462f-a3d4-ac29dd2fe622;netflicx;350.0;2021-03-28T21:06:09.372054700;user2@binarycod.com

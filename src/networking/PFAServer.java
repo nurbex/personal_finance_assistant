@@ -54,8 +54,11 @@ public class PFAServer {
                     writeToWriterAndFlush(ui.mainMenu(), out);
                     input = in.nextInt();
 
-                    if (input == -1)
+                    if (input == -1){
+                        System.out.println("user is not present");
                         break;
+                    }
+
                     switch (input) {
                         case 1:
                             writeToWriterAndFlush(ui.newIncomeMenu(), out);
@@ -98,7 +101,7 @@ public class PFAServer {
                             Float expenseSum = expenseService.calculateSum(expenseService.getExpensesOfGivenDate(LocalDateTime.now(), user));
 
                             writeToWriterAndFlush(incomeService.getIncomesOfGivenDate(LocalDateTime.now(), user).toString(), out);
-                            writeToWriterAndFlush(expenseService.filterListByDate(LocalDateTime.now()).toString(), out);
+                            writeToWriterAndFlush(expenseService.getExpensesOfGivenDate(LocalDateTime.now(), user).toString(), out);
 
                             writeToWriterAndFlush("sum of your incomes for month: "+LocalDateTime.now().getMonth()+" : "
                                     + incomeSum, out);
