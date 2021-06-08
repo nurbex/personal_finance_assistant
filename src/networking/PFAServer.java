@@ -99,24 +99,18 @@ public class PFAServer {
                         case 5:
                             Float incomeSum = incomeService.calculateSum(incomeService.getIncomesOfGivenDate(LocalDateTime.now(), user));
                             Float expenseSum = expenseService.calculateSum(expenseService.getExpensesOfGivenDate(LocalDateTime.now(), user));
-
                             writeToWriterAndFlush(incomeService.getIncomesOfGivenDate(LocalDateTime.now(), user).toString(), out);
                             writeToWriterAndFlush(expenseService.getExpensesOfGivenDate(LocalDateTime.now(), user).toString(), out);
-
-                            writeToWriterAndFlush("sum of your incomes for month: "+LocalDateTime.now().getMonth()+" : "
-                                    + incomeSum, out);
-
-                            writeToWriterAndFlush("sum of expenses for month: "+LocalDateTime.now().getMonth()+ " : "
-                                    + expenseSum, out);
+                            writeToWriterAndFlush("sum of your incomes for month: "+LocalDateTime.now().getMonth()+" : " + incomeSum, out);
+                            writeToWriterAndFlush("sum of expenses for month: "+LocalDateTime.now().getMonth()+ " : " + expenseSum, out);
                             writeToWriterAndFlush("Your balance is : "+ (incomeSum - expenseSum), out);
                             break;
                         default:
-                            writeToWriterAndFlush("please use numbers between 1 and 4", out);
+                            writeToWriterAndFlush("please use numbers between 1 and 5", out);
                             break;
                     }
 
                 } while (input != -1);
-
             }
             else{
                 writeToWriterAndFlush(ui.noSucchUser(),out);

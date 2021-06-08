@@ -7,3 +7,5 @@ I;e14cf0e6-4ce6-460e-bdcf-ab243e1b6241;salalry;1000.0;2021-03-28T20:53:24.62119
 E;4afad981-1c9b-4ec7-8b1f-e5d9ccd5f2b6;taxes;10000.0;2021-03-28T20:53:50.763707500;user1@binarycod.com
 I;9fc4cabc-cfd9-4759-a28e-4fb71317d10c;salary;30000.0;2021-03-28T21:05:31.209339800;user2@binarycod.com
 E;d3a25394-bcdc-462f-a3d4-ac29dd2fe622;netflicx;350.0;2021-03-28T21:06:09.372054700;user2@binarycod.com
+I;041254da-26b1-4c2b-adcd-c7fdb8b8c3af;nurbsalary;3999.0;2021-04-10T13:42:36.539147700;user1@binarycod.com
+E;a10af46d-f31b-45ed-b839-b66eed1d290f;nertflix;32.0;2021-04-10T13:42:56.389364;user1@binarycod.com
